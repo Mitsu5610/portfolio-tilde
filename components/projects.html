@@ -1,109 +1,119 @@
-<!--
-  PROJECTS.HTML — Projects Section Component
-  Lawrence Olivier N. Tilde Portfolio
--->
-
-<section id="projects" class="section-padding">
+<!-- ══════════ PROJECTS ══════════ -->
+<section id="projects" class="section-padding" style="background:var(--dark-bg);">
   <div class="container">
 
     <div class="section-header reveal">
       <div class="section-tag">Portfolio</div>
       <h2 class="section-title">Featured <span class="text-red">Projects</span></h2>
-      <p class="section-subtitle">
-        Systems I've designed, developed, and deployed — solving real problems
-        with practical, scalable technology.
-      </p>
+      <p class="section-subtitle">Real systems. Real impact. Built from scratch with production-grade code.</p>
     </div>
 
     <div class="projects-grid">
 
-      <!-- Project 1: University Clinic -->
-      <div class="project-card reveal">
-        <div class="project-image">
-          <div class="project-image-bg">
-            <span class="project-image-icon">🏥</span>
-          </div>
-          <div class="project-badge">Web System</div>
+      <!-- PROJECT 1 — Face Recognition -->
+      <div class="project-v3 reveal">
+        <div class="proj-screenshot">
+          <img src="images/project-facerec.png" alt="Present and Ready — Face Recognition System" />
+          <div class="proj-screenshot-overlay"></div>
+          <div class="proj-screenshot-badge">AI / Computer Vision</div>
+          <div class="proj-screenshot-num">01</div>
         </div>
-        <div class="project-body">
-          <div class="project-number">01 / 02</div>
-          <h3 class="project-name">University Clinic Management & Appointment Request System</h3>
-          <p class="project-desc">
-            A comprehensive web-based clinic management system designed for university health centers.
-            Features include patient record management, appointment scheduling and requests,
-            medical history tracking, staff administration, and automated notifications — 
-            streamlining healthcare delivery on campus.
-          </p>
-          <div class="project-tech">
-            <span class="project-tech-tag">PHP</span>
-            <span class="project-tech-tag">Laravel</span>
-            <span class="project-tech-tag">MySQL</span>
-            <span class="project-tech-tag">Bootstrap</span>
-            <span class="project-tech-tag">JavaScript</span>
-            <span class="project-tech-tag">Blade</span>
-          </div>
-          <div class="project-footer">
-            <a href="#" class="project-link">
-              <span>View Details</span>
-              <span>→</span>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-type">// Capstone Project · WMSU</span>
+            <a href="https://github.com/Guilmarqw/2025-CP_Present-and-Ready"
+               target="_blank" class="proj-github-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub ↗
             </a>
-            <div style="display:flex; gap:8px;">
-              <a href="#" class="btn btn-icon" title="GitHub" style="font-size:0.75rem;">GH</a>
-              <a href="#" class="btn btn-icon" title="Live Demo" style="font-size:0.75rem;">↗</a>
+          </div>
+          <h3 class="proj-title">Present and Ready: Liveness Detection for Real-Time Face Recognition</h3>
+          <p class="proj-desc">
+            Real-time AI-powered attendance system. Detects live faces, blocks spoofing
+            (photos/videos), identifies registered students using InsightFace deep embeddings,
+            tracks multiple subjects simultaneously with ByteTrack, and logs attendance to
+            MySQL with email notifications — all running on a Flask backend with
+            a threaded camera pipeline.
+          </p>
+          <div class="proj-pills">
+            <span class="proj-pill">Python</span>
+            <span class="proj-pill">OpenCV</span>
+            <span class="proj-pill">InsightFace</span>
+            <span class="proj-pill">YOLO</span>
+            <span class="proj-pill">Dlib</span>
+            <span class="proj-pill">PyTorch</span>
+            <span class="proj-pill">TorchReID</span>
+            <span class="proj-pill">ONNX Runtime</span>
+            <span class="proj-pill">ByteTrack</span>
+            <span class="proj-pill">Flask</span>
+            <span class="proj-pill">MySQL</span>
+            <span class="proj-pill">NumPy</span>
+            <span class="proj-pill">SciPy</span>
+            <span class="proj-pill">OpenPyXL</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-school">
+              <img src="images/wmsu-logo-final.jpg" class="proj-school-img" alt="WMSU" />
+              <span class="proj-school-txt">WMSU · CCS Capstone 2025</span>
             </div>
+            <a href="https://github.com/Guilmarqw/2025-CP_Present-and-Ready"
+               target="_blank"
+               style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.12em;
+                      text-transform:uppercase;color:var(--red-primary);transition:color 0.2s;"
+               onmouseover="this.style.color='#fff'"
+               onmouseout="this.style.color='var(--red-primary)'">
+              View Repo →
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Project 2: Liveness Detection -->
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-image">
-          <div class="project-image-bg">
-            <span class="project-image-icon">👁️</span>
-          </div>
-          <div class="project-badge">AI / CV</div>
+      <!-- PROJECT 2 — Clinic System -->
+      <div class="project-v3 reveal reveal-delay-2">
+        <div class="proj-screenshot">
+          <img src="images/project-clinic.png" alt="WMSU Health Services — University Clinic Management System" />
+          <div class="proj-screenshot-overlay"></div>
+          <div class="proj-screenshot-badge">Web System</div>
+          <div class="proj-screenshot-num">02</div>
         </div>
-        <div class="project-body">
-          <div class="project-number">02 / 02</div>
-          <h3 class="project-name">Present and Ready: Liveness Detection for Real-Time Face Recognition</h3>
-          <p class="project-desc">
-            A real-time attendance and identity verification system powered by computer vision.
-            Implements liveness detection to prevent spoofing attacks (photos/videos),
-            combined with facial recognition for accurate, live person identification —
-            ensuring secure and fraud-proof presence verification.
-          </p>
-          <div class="project-tech">
-            <span class="project-tech-tag">Python</span>
-            <span class="project-tech-tag">OpenCV</span>
-            <span class="project-tech-tag">DeepFace</span>
-            <span class="project-tech-tag">TensorFlow</span>
-            <span class="project-tech-tag">Flask</span>
-            <span class="project-tech-tag">NumPy</span>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-type">// University Project · WMSU</span>
+            <span class="proj-github-link" style="color:var(--gray-700);cursor:default;border-color:var(--dark-border);">
+              Private
+            </span>
           </div>
-          <div class="project-footer">
-            <a href="#" class="project-link">
-              <span>View Details</span>
-              <span>→</span>
-            </a>
-            <div style="display:flex; gap:8px;">
-              <a href="#" class="btn btn-icon" title="GitHub" style="font-size:0.75rem;">GH</a>
-              <a href="#" class="btn btn-icon" title="Live Demo" style="font-size:0.75rem;">↗</a>
+          <h3 class="proj-title">University Clinic Management &amp; Appointment Request System</h3>
+          <p class="proj-desc">
+            Full-featured web system for WMSU Health Services. Covers patient record
+            management, appointment scheduling and requests, medical &amp; dental consultation
+            logs, pharmacy management, real-time notifications (43+ shown), staff dashboards,
+            admin content management, and role-based access control —
+            completely digitizing the campus healthcare workflow.
+          </p>
+          <div class="proj-pills">
+            <span class="proj-pill">PHP</span>
+            <span class="proj-pill">Laravel</span>
+            <span class="proj-pill">MySQL</span>
+            <span class="proj-pill">Bootstrap</span>
+            <span class="proj-pill">JavaScript</span>
+            <span class="proj-pill">Blade Templates</span>
+            <span class="proj-pill">SMTP Mail</span>
+            <span class="proj-pill">Role-Based Auth</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-school">
+              <img src="images/wmsu-logo-final.jpg" class="proj-school-img" alt="WMSU" />
+              <span class="proj-school-txt">WMSU Health Services</span>
             </div>
+            <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.12em;
+                         text-transform:uppercase;color:var(--gray-700);">
+              No Public Repo
+            </span>
           </div>
         </div>
       </div>
 
     </div>
-
-    <!-- CTA -->
-    <div class="reveal" style="text-align:center; margin-top: var(--space-xxl);">
-      <p style="font-family: var(--font-mono); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color: var(--gray-500); margin-bottom: var(--space-md);">
-        More projects in progress
-      </p>
-      <a href="https://github.com/" target="_blank" class="btn btn-outline btn-lg">
-        View GitHub Profile →
-      </a>
-    </div>
-
   </div>
 </section>

@@ -1,23 +1,14 @@
-<!--
-  SKILLS.HTML — Skills Section Component
-  Lawrence Olivier N. Tilde Portfolio
--->
-
-<section id="skills" class="section-padding">
+<!-- ══════════ SKILLS ══════════ -->
+<section id="skills" class="section-padding" style="background:var(--dark-surface);">
   <div class="container">
 
     <div class="section-header reveal">
       <div class="section-tag">Technologies</div>
       <h2 class="section-title">My <span class="text-red">Stack</span></h2>
-      <p class="section-subtitle">
-        A collection of tools and technologies I use to build robust, 
-        performant, and user-centered applications.
-      </p>
+      <p class="section-subtitle">Full-stack web development meets deep learning and computer vision.</p>
     </div>
 
-    <!-- Skills Categories Grid -->
     <div class="skills-grid">
-
       <div class="skill-category reveal">
         <span class="skill-cat-icon">🌐</span>
         <div class="skill-cat-name">Frontend</div>
@@ -29,9 +20,9 @@
           <span class="skill-tag">Bootstrap</span>
           <span class="skill-tag">Tailwind CSS</span>
           <span class="skill-tag">jQuery</span>
+          <span class="skill-tag">Blade Templates</span>
         </div>
       </div>
-
       <div class="skill-category reveal reveal-delay-1">
         <span class="skill-cat-icon">⚙️</span>
         <div class="skill-cat-name">Backend</div>
@@ -39,123 +30,105 @@
           <span class="skill-tag">PHP</span>
           <span class="skill-tag">Laravel</span>
           <span class="skill-tag">Python</span>
+          <span class="skill-tag">Flask</span>
           <span class="skill-tag">Node.js</span>
           <span class="skill-tag">REST APIs</span>
         </div>
       </div>
-
       <div class="skill-category reveal reveal-delay-2">
-        <span class="skill-cat-icon">🗄️</span>
-        <div class="skill-cat-name">Database</div>
-        <div class="skill-list">
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">Firebase</span>
-        </div>
-      </div>
-
-      <div class="skill-category reveal reveal-delay-3">
         <span class="skill-cat-icon">🤖</span>
         <div class="skill-cat-name">AI / Computer Vision</div>
         <div class="skill-list">
           <span class="skill-tag">OpenCV</span>
-          <span class="skill-tag">Face Recognition</span>
-          <span class="skill-tag">Liveness Detection</span>
-          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">InsightFace</span>
           <span class="skill-tag">DeepFace</span>
+          <span class="skill-tag">YOLO · Ultralytics</span>
+          <span class="skill-tag">Dlib</span>
+          <span class="skill-tag">TorchReID</span>
+          <span class="skill-tag">ONNX Runtime</span>
+          <span class="skill-tag">ByteTrack</span>
+          <span class="skill-tag">Supervision</span>
+          <span class="skill-tag">Liveness Detection</span>
         </div>
       </div>
-
-      <div class="skill-category reveal">
-        <span class="skill-cat-icon">🛠️</span>
-        <div class="skill-cat-name">Tools & DevOps</div>
+      <div class="skill-category reveal reveal-delay-3">
+        <span class="skill-cat-icon">🧠</span>
+        <div class="skill-cat-name">ML / Deep Learning</div>
         <div class="skill-list">
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">SciPy</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <span class="skill-cat-icon">🗄️</span>
+        <div class="skill-cat-name">Database</div>
+        <div class="skill-list">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MySQL Connector</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Firebase</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-1">
+        <span class="skill-cat-icon">🛠️</span>
+        <div class="skill-cat-name">Tools &amp; Others</div>
+        <div class="skill-list">
+          <span class="skill-tag">Git / GitHub</span>
           <span class="skill-tag">VS Code</span>
           <span class="skill-tag">Linux</span>
           <span class="skill-tag">Postman</span>
           <span class="skill-tag">Figma</span>
+          <span class="skill-tag">OpenPyXL</span>
         </div>
       </div>
-
-      <div class="skill-category reveal reveal-delay-1">
-        <span class="skill-cat-icon">📱</span>
-        <div class="skill-cat-name">Other</div>
-        <div class="skill-list">
-          <span class="skill-tag">Agile</span>
-          <span class="skill-tag">UI/UX Design</span>
-          <span class="skill-tag">System Analysis</span>
-          <span class="skill-tag">Technical Docs</span>
-        </div>
-      </div>
-
     </div>
 
     <!-- Proficiency Bars -->
-    <div class="skills-bars">
-
+    <div class="skills-bars-2col">
       <div class="skill-bar-item reveal">
         <div class="skill-bar-header">
-          <span class="skill-bar-name">Python / OpenCV</span>
-          <span class="skill-bar-pct">88%</span>
+          <span class="skill-bar-name">Python · OpenCV · AI</span>
+          <span class="skill-bar-pct">90%</span>
         </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 88%;"></div>
-        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:90%;"></div></div>
       </div>
-
+      <div class="skill-bar-item reveal reveal-delay-1">
+        <div class="skill-bar-header">
+          <span class="skill-bar-name">HTML / CSS</span>
+          <span class="skill-bar-pct">92%</span>
+        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:92%;"></div></div>
+      </div>
       <div class="skill-bar-item reveal reveal-delay-1">
         <div class="skill-bar-header">
           <span class="skill-bar-name">PHP / Laravel</span>
           <span class="skill-bar-pct">85%</span>
         </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 85%;"></div>
-        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:85%;"></div></div>
       </div>
-
+      <div class="skill-bar-item reveal reveal-delay-2">
+        <div class="skill-bar-header">
+          <span class="skill-bar-name">MySQL / Database</span>
+          <span class="skill-bar-pct">83%</span>
+        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:83%;"></div></div>
+      </div>
       <div class="skill-bar-item reveal reveal-delay-2">
         <div class="skill-bar-header">
           <span class="skill-bar-name">JavaScript / React</span>
           <span class="skill-bar-pct">80%</span>
         </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 80%;"></div>
-        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:80%;"></div></div>
       </div>
-
       <div class="skill-bar-item reveal reveal-delay-3">
         <div class="skill-bar-header">
-          <span class="skill-bar-name">HTML / CSS</span>
-          <span class="skill-bar-pct">92%</span>
+          <span class="skill-bar-name">PyTorch / Deep Learning</span>
+          <span class="skill-bar-pct">78%</span>
         </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 92%;"></div>
-        </div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:78%;"></div></div>
       </div>
-
-      <div class="skill-bar-item reveal">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">MySQL / Database</span>
-          <span class="skill-bar-pct">82%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 82%;"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item reveal reveal-delay-1">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">UI/UX Design</span>
-          <span class="skill-bar-pct">75%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" style="--target-width: 75%;"></div>
-        </div>
-      </div>
-
     </div>
 
   </div>

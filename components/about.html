@@ -1,35 +1,21 @@
-<!--
-  ABOUT.HTML — About Section Component
-  Lawrence Olivier N. Tilde Portfolio
--->
-
+<!-- ══════════ ABOUT ══════════ -->
 <section id="about" class="section-padding">
   <div class="container">
-    <div class="about-grid">
+    <div class="about-grid" style="gap:5rem;">
 
-      <!-- Image -->
-      <div class="about-image-wrapper reveal">
-        <div class="about-image-frame">
-          <!-- Replace with your actual photo -->
-          <img
-            src="images/profile.jpg"
-            alt="Lawrence Olivier N. Tilde"
-            class="about-avatar"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <!-- Fallback avatar if no image -->
-          <div class="about-avatar-fallback" style="
-            width:100%; max-width:400px; aspect-ratio:1;
-            background: linear-gradient(135deg, #141414, #0f0f0f);
-            display:flex; align-items:center; justify-content:center;
-            border:1px solid #1E1E1E; font-family:'Bebas Neue',cursive;
-            font-size:6rem; color:#E8000D; letter-spacing:4px;
-          ">LOT</div>
-
-          <!-- Company Badge -->
-          <div class="about-company-badge">
-            <div class="badge-label">Works at</div>
-            <div class="badge-company">MITSU BYTES</div>
+      <!-- Profile photo -->
+      <div class="about-image-wrapper reveal" style="display:flex;justify-content:center;">
+        <div style="position:relative;max-width:380px;width:100%;">
+          <div class="profile-wrap">
+            <img src="images/profile.jpg" alt="Lawrence Olivier N. Tilde" class="profile-img" />
+          </div>
+          <div class="ojt-badge">
+            <div class="ojt-dot"></div>
+            <img src="images/vintazk-logo.jpg" class="ojt-badge-img" alt="Vintazk" />
+            <div>
+              <div class="ojt-badge-label">Currently OJT at</div>
+              <div class="ojt-badge-val">Vintazk Outsourcing</div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,52 +29,78 @@
 
         <div class="reveal reveal-delay-1">
           <p>
-            I'm <strong>Lawrence Olivier N. Tilde</strong>, a Full Stack Developer based in
-            <strong>Zamboanga City, Philippines</strong>, and a developer at
-            <strong>MITSU BYTES</strong>. I specialize in building web systems that are
-            functional, scalable, and intuitive.
+            Hey — I'm <strong>Lawrence Olivier N. Tilde</strong>, also known as
+            <strong style="color:var(--red-primary);">MITSU</strong>. I'm a
+            <strong>4th Year BS Information Technology</strong> student at
+            <strong>Western Mindanao State University</strong>, College of Computing Studies,
+            currently doing my On-the-Job Training at <strong>Vintazk Outsourcing</strong>
+            in Zamboanga City, Philippines.
           </p>
           <p>
-            My work spans from healthcare management systems to real-time face
-            recognition using computer vision — combining backend logic with
-            clean, purposeful frontends. I'm driven by solving real-world problems
-            through thoughtful software engineering.
+            I build real-world systems — my capstone project is a
+            real-time AI face recognition system with liveness detection,
+            powered by OpenCV, InsightFace, YOLO, PyTorch, and more.
+            I also built a full university clinic management system
+            using Laravel and MySQL.
           </p>
           <p>
-            When I'm not building, I'm learning. Technology evolves fast, and
-            I evolve with it.
+            I build things that actually work. I push what I know to the edge,
+            then go further.
           </p>
         </div>
 
-        <!-- Details Grid -->
         <div class="about-details reveal reveal-delay-2">
           <div class="about-detail-item">
-            <div class="detail-label">Location</div>
-            <div class="detail-value">Zamboanga City, Philippines</div>
+            <div class="detail-label">Degree</div>
+            <div class="detail-value">BS Information Technology</div>
           </div>
           <div class="about-detail-item">
-            <div class="detail-label">Company</div>
-            <div class="detail-value">MITSU BYTES</div>
+            <div class="detail-label">Year Level</div>
+            <div class="detail-value">4th Year · BSIT</div>
+          </div>
+          <div class="about-detail-item">
+            <div class="detail-label">University</div>
+            <div class="detail-value">WMSU · Zamboanga City</div>
+          </div>
+          <div class="about-detail-item">
+            <div class="detail-label">OJT</div>
+            <div class="detail-value" style="color:#22c55e;">● Vintazk Outsourcing</div>
           </div>
           <div class="about-detail-item">
             <div class="detail-label">Email</div>
             <div class="detail-value">
-              <a href="mailto:lawrencetilde@gmail.com">lawrencetilde@gmail.com</a>
+              <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank">lawrencetilde@gmail.com</a>
             </div>
           </div>
           <div class="about-detail-item">
-            <div class="detail-label">Status</div>
-            <div class="detail-value" style="color: var(--red-primary);">● Available</div>
+            <div class="detail-label">GitHub</div>
+            <div class="detail-value">
+              <a href="https://github.com/Mitsu5610" target="_blank">github.com/Mitsu5610</a>
+            </div>
           </div>
         </div>
 
         <div class="hero-cta reveal reveal-delay-3">
-          <a href="mailto:lawrencetilde@gmail.com" class="btn btn-primary">
-            Get In Touch
-            <span class="btn-arrow"></span>
+          <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank" class="btn btn-primary">
+            Get In Touch <span class="btn-arrow"></span>
           </a>
+          <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-outline">GitHub ↗</a>
         </div>
       </div>
+
     </div>
+
+    <!-- Logo Strip -->
+    <div class="logo-strip reveal">
+      <div class="logo-strip-item">
+        <img src="images/wmsu-logo-final.jpg" alt="WMSU" />
+        <div class="logo-strip-label">WMSU · University</div>
+      </div>
+      <div class="logo-strip-item">
+        <img src="images/vintazk-logo.jpg" alt="Vintazk Outsourcing" />
+        <div class="logo-strip-label">Vintazk · OJT Company</div>
+      </div>
+    </div>
+
   </div>
 </section>

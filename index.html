@@ -9,6 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -16,9 +17,8 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/sections.css" />
-    <link rel="stylesheet" href="css/others.css" />
+  <link rel="stylesheet" href="css/others.css" />
 
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('YOUR_PUBLIC_KEY');</script>
 </head>
@@ -28,719 +28,269 @@
   <div class="cursor"          id="cursor"></div>
   <div class="cursor-follower" id="cursor-follower"></div>
 
-  <!-- Loader -->
-  <div class="page-loader" id="page-loader">
-    <div style="font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:3px;color:#555;">
-      <span style="color:#E8000D;">// </span>loading portfolio...
-    </div>
-    <div style="margin-top:1.8rem;">
-      <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
-    </div>
-    <div class="loader-text" style="margin-top:1rem;">Lawrence Olivier N. Tilde</div>
-  </div>
-
-  <!-- ══════════ NAVBAR ══════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">
-        <span style="color:var(--red-primary);">&#60;</span>LOT<span style="color:var(--red-primary);">/&#62;</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about"     class="nav-link">About</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#skills"    class="nav-link">Skills</a></li>
-        <li><a href="#projects"  class="nav-link">Projects</a></li>
-        <li><a href="#contact"   class="nav-link">Contact</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#bad6dbcdc8dfd4d9dfced3d6dedffaddd7dbd3d694d9d5d7" class="btn nav-cta btn-sm">Hire Me</a></li>
-      </ul>
-      <button class="nav-hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ══════════ HERO ══════════ -->
-  <section id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-scanlines"></div>
-    <div class="hero-orb"></div>
-    <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
-
-    <div class="container">
-      <div class="hero-content">
-
-        <div class="hero-badge">
-          <span style="width:7px;height:7px;background:#22c55e;border-radius:50%;display:inline-block;animation:ojt-pulse 2s infinite;"></span>
-          &nbsp;OJT AT Vintazk Outsourcing
-        </div>
-
-        <h1 class="hero-name">
-          Lawrence<br>
-          <span class="highlight" data-text="Olivier">Olivier</span><br>
-          Tilde
-        </h1>
-
-        <p class="hero-title">
-          Full Stack Developer
-          <span class="separator">//</span>
-          AI &amp; Computer Vision
-          <span class="separator">//</span>
-          AKA <span style="color:var(--red-primary);">MITSU</span>
-        </p>
-
-        <p class="hero-description">
-          4th Year BSIT · Western Mindanao State University · CCS<br>
-          Building real systems — from clinic management platforms to
-          real-time AI face recognition with liveness detection.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary btn-lg">View Projects <span class="btn-arrow"></span></a>
-          <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-outline btn-lg">GitHub ↗</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-value"><span class="count-up" data-target="2" data-suffix="+">2+</span></div>
-            <div class="hero-stat-label">Major Projects</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value"><span class="count-up" data-target="15" data-suffix="+">15+</span></div>
-            <div class="hero-stat-label">Libraries</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value"><span class="count-up" data-target="4" data-suffix="th">4th</span></div>
-            <div class="hero-stat-label">Year BSIT</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="hero-floating">
-      <div class="floating-tag">Python</div>
-      <div class="floating-tag">OpenCV</div>
-      <div class="floating-tag">InsightFace</div>
-      <div class="floating-tag">Laravel</div>
-      <div class="floating-tag">YOLO</div>
-    </div>
-
-
-  </section>
-
-  <!-- ══════════ ABOUT ══════════ -->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="about-grid" style="gap:5rem;">
-
-        <!-- Profile photo -->
-        <div class="about-image-wrapper reveal" style="display:flex;justify-content:center;">
-          <div style="position:relative;max-width:380px;width:100%;">
-            <div class="profile-wrap">
-              <img src="images/profile.jpg" alt="Lawrence Olivier N. Tilde" class="profile-img" />
-            </div>
-            <!-- OJT Badge -->
-            <div class="ojt-badge">
-              <div class="ojt-dot"></div>
-              <img src="images/vintazk-logo.jpg" class="ojt-badge-img" alt="Vintazk" />
-              <div>
-                <div class="ojt-badge-label">Currently OJT at</div>
-                <div class="ojt-badge-val">Vintazk Outsourcing</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Text -->
-        <div class="about-text">
-          <div class="section-header reveal">
-            <div class="section-tag">About Me</div>
-            <h2 class="section-title">Code. Build.<br><span class="text-red">Innovate.</span></h2>
-          </div>
-
-          <div class="reveal reveal-delay-1">
-            <p>
-              Hey — I'm <strong>Lawrence Olivier N. Tilde</strong>, also known as
-              <strong style="color:var(--red-primary);">MITSU</strong>. I'm a
-              <strong>4th Year BS Information Technology</strong> student at
-              <strong>Western Mindanao State University</strong>, College of Computing Studies,
-              currently doing my On-the-Job Training at <strong>Vintazk Outsourcing</strong>
-              in Zamboanga City, Philippines.
-            </p>
-            <p>
-              I build real-world systems — my capstone project is a
-              real-time AI face recognition system with liveness detection,
-              powered by OpenCV, InsightFace, YOLO, PyTorch, and more.
-              I also built a full university clinic management system
-              using Laravel and MySQL.
-            </p>
-            <p>
-              I build things that actually work. I push what I know to the edge,
-              then go further.
-            </p>
-          </div>
-
-          <div class="about-details reveal reveal-delay-2">
-            <div class="about-detail-item">
-              <div class="detail-label">Degree</div>
-              <div class="detail-value">BS Information Technology</div>
-            </div>
-            <div class="about-detail-item">
-              <div class="detail-label">Year Level</div>
-              <div class="detail-value">4th Year · BSIT</div>
-            </div>
-            <div class="about-detail-item">
-              <div class="detail-label">University</div>
-              <div class="detail-value">WMSU · Zamboanga City</div>
-            </div>
-            <div class="about-detail-item">
-              <div class="detail-label">OJT</div>
-              <div class="detail-value" style="color:#22c55e;">● Vintazk Outsourcing</div>
-            </div>
-            <div class="about-detail-item">
-              <div class="detail-label">Email</div>
-              <div class="detail-value">
-                <a href="/cdn-cgi/l/email-protection#0569647277606b6660716c696160456268646c692b666a68"><span class="__cf_email__" data-cfemail="3d515c4a4f58535e5849545159587d5a505c5451135e5250">[email&#160;protected]</span></a>
-              </div>
-            </div>
-            <div class="about-detail-item">
-              <div class="detail-label">GitHub</div>
-              <div class="detail-value">
-                <a href="https://github.com/Mitsu5610" target="_blank">github.com/Mitsu5610</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-cta reveal reveal-delay-3">
-            <a href="/cdn-cgi/l/email-protection#4824293f3a2d262b2d3c21242c2d082f25292124662b2725" class="btn btn-primary">
-              Get In Touch <span class="btn-arrow"></span>
-            </a>
-            <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-outline">GitHub ↗</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Logo Strip -->
-      <div class="logo-strip reveal">
-        <div class="logo-strip-item">
-          <img src="images/wmsu-logo-final.jpg" alt="WMSU" />
-          <div class="logo-strip-label">WMSU · University</div>
-        </div>
-        <div class="logo-strip-item">
-          <img src="images/vintazk-logo.jpg" alt="Vintazk Outsourcing" />
-          <div class="logo-strip-label">Vintazk · OJT Company</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════ EDUCATION ══════════ -->
-  <section id="education" class="section-padding" style="background:var(--dark-bg);">
-    <div class="container">
-
-      <div class="section-header reveal">
-        <div class="section-tag">Background</div>
-        <h2 class="section-title">Edu<span class="text-red">cation</span></h2>
-        <p class="section-subtitle">Academic foundation and current training.</p>
-      </div>
-
-      <div class="edu-timeline">
-
-        <!-- WMSU -->
-        <div class="edu-item reveal">
-          <div class="edu-logo-circle">
-            <img src="images/wmsu-logo-final.jpg" alt="WMSU" />
-          </div>
-          <div class="edu-body">
-            <div class="edu-degree">Bachelor of Science in Information Technology · 4th Year</div>
-            <div class="edu-school">Western Mindanao State University</div>
-            <div class="edu-dept">
-              College of Computing Studies · Zamboanga City, Philippines · Est. 1904
-            </div>
-            <div class="edu-chips">
-              <span class="edu-chip">WMSU</span>
-              <span class="edu-chip">BSIT</span>
-              <span class="edu-chip">4th Year</span>
-              <span class="edu-chip">CCS</span>
-              <span class="edu-chip">Zamboanga City</span>
-            </div>
-          </div>
-          <a href="https://www.linkedin.com/school/western-mindanao-state-university/"
-             target="_blank" class="edu-ext-link">LinkedIn ↗</a>
-        </div>
-
-        <!-- Vintazk OJT -->
-        <div class="edu-item reveal reveal-delay-1" style="border-color:rgba(34,197,94,0.15);">
-          <div class="edu-logo-circle" style="border-color:rgba(34,197,94,0.25);background:var(--dark-surface);">
-            <img src="images/vintazk-logo.jpg" alt="Vintazk" />
-          </div>
-          <div class="edu-body">
-            <div class="edu-degree" style="color:#22c55e;">On-The-Job Training · Currently Active</div>
-            <div class="edu-school">Vintazk Outsourcing</div>
-            <div class="edu-dept">Business Support Services · Zamboanga City, Philippines</div>
-            <div class="edu-chips">
-              <span class="edu-chip green">● Active OJT</span>
-              <span class="edu-chip">Full Stack Dev</span>
-              <span class="edu-chip">Software Development</span>
-            </div>
-          </div>
-          <a href="https://www.linkedin.com/company/vintazk-outsourcing/posts/?feedView=all"
-             target="_blank" class="edu-ext-link"
-             style="color:#22c55e;border-color:rgba(34,197,94,0.3);"
-             onmouseover="this.style.color='#fff';this.style.borderColor='rgba(34,197,94,0.6)'"
-             onmouseout="this.style.color='#22c55e';this.style.borderColor='rgba(34,197,94,0.3)'">
-            LinkedIn ↗
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ SKILLS ══════════ -->
-  <section id="skills" class="section-padding" style="background:var(--dark-surface);">
-    <div class="container">
-
-      <div class="section-header reveal">
-        <div class="section-tag">Technologies</div>
-        <h2 class="section-title">My <span class="text-red">Stack</span></h2>
-        <p class="section-subtitle">
-          Full-stack web development meets deep learning and computer vision.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-category reveal">
-          <span class="skill-cat-icon">🌐</span>
-          <div class="skill-cat-name">Frontend</div>
-          <div class="skill-list">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Bootstrap</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">jQuery</span>
-            <span class="skill-tag">Blade Templates</span>
-          </div>
-        </div>
-        <div class="skill-category reveal reveal-delay-1">
-          <span class="skill-cat-icon">⚙️</span>
-          <div class="skill-cat-name">Backend</div>
-          <div class="skill-list">
-            <span class="skill-tag">PHP</span>
-            <span class="skill-tag">Laravel</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">REST APIs</span>
-          </div>
-        </div>
-        <div class="skill-category reveal reveal-delay-2">
-          <span class="skill-cat-icon">🤖</span>
-          <div class="skill-cat-name">AI / Computer Vision</div>
-          <div class="skill-list">
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">InsightFace</span>
-            <span class="skill-tag">DeepFace</span>
-            <span class="skill-tag">YOLO · Ultralytics</span>
-            <span class="skill-tag">Dlib</span>
-            <span class="skill-tag">TorchReID</span>
-            <span class="skill-tag">ONNX Runtime</span>
-            <span class="skill-tag">ByteTrack</span>
-            <span class="skill-tag">Supervision</span>
-            <span class="skill-tag">Liveness Detection</span>
-          </div>
-        </div>
-        <div class="skill-category reveal reveal-delay-3">
-          <span class="skill-cat-icon">🧠</span>
-          <div class="skill-cat-name">ML / Deep Learning</div>
-          <div class="skill-list">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">SciPy</span>
-          </div>
-        </div>
-        <div class="skill-category reveal">
-          <span class="skill-cat-icon">🗄️</span>
-          <div class="skill-cat-name">Database</div>
-          <div class="skill-list">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MySQL Connector</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Firebase</span>
-          </div>
-        </div>
-        <div class="skill-category reveal reveal-delay-1">
-          <span class="skill-cat-icon">🛠️</span>
-          <div class="skill-cat-name">Tools &amp; Others</div>
-          <div class="skill-list">
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Postman</span>
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">OpenPyXL</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proficiency bars — 2 columns -->
-      <div class="skills-bars-2col">
-        <div class="skill-bar-item reveal">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">Python · OpenCV · AI</span>
-            <span class="skill-bar-pct">90%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:90%;"></div></div>
-        </div>
-        <div class="skill-bar-item reveal reveal-delay-1">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">HTML / CSS</span>
-            <span class="skill-bar-pct">92%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:92%;"></div></div>
-        </div>
-        <div class="skill-bar-item reveal reveal-delay-1">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">PHP / Laravel</span>
-            <span class="skill-bar-pct">85%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:85%;"></div></div>
-        </div>
-        <div class="skill-bar-item reveal reveal-delay-2">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">MySQL / Database</span>
-            <span class="skill-bar-pct">83%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:83%;"></div></div>
-        </div>
-        <div class="skill-bar-item reveal reveal-delay-2">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">JavaScript / React</span>
-            <span class="skill-bar-pct">80%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:80%;"></div></div>
-        </div>
-        <div class="skill-bar-item reveal reveal-delay-3">
-          <div class="skill-bar-header">
-            <span class="skill-bar-name">PyTorch / Deep Learning</span>
-            <span class="skill-bar-pct">78%</span>
-          </div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="--target-width:78%;"></div></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════ PROJECTS ══════════ -->
-  <section id="projects" class="section-padding" style="background:var(--dark-bg);">
-    <div class="container">
-
-      <div class="section-header reveal">
-        <div class="section-tag">Portfolio</div>
-        <h2 class="section-title">Featured <span class="text-red">Projects</span></h2>
-        <p class="section-subtitle">
-          Real systems. Real impact. Built from scratch with production-grade code.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- PROJECT 1 — Face Recognition -->
-        <div class="project-v3 reveal">
-          <div class="proj-screenshot">
-            <img src="images/project-facerec.png" alt="Present and Ready — Face Recognition System" />
-            <div class="proj-screenshot-overlay"></div>
-            <div class="proj-screenshot-badge">AI / Computer Vision</div>
-            <div class="proj-screenshot-num">01</div>
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta">
-              <span class="proj-type">// Capstone Project · WMSU</span>
-              <a href="https://github.com/Guilmarqw/2025-CP_Present-and-Ready"
-                 target="_blank" class="proj-github-link">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub ↗
-              </a>
-            </div>
-            <h3 class="proj-title">Present and Ready: Liveness Detection for Real-Time Face Recognition</h3>
-            <p class="proj-desc">
-              Real-time AI-powered attendance system. Detects live faces, blocks spoofing
-              (photos/videos), identifies registered students using InsightFace deep embeddings,
-              tracks multiple subjects simultaneously with ByteTrack, and logs attendance to
-              MySQL with email notifications — all running on a Flask backend with
-              a threaded camera pipeline.
-            </p>
-            <div class="proj-pills">
-              <span class="proj-pill">Python</span>
-              <span class="proj-pill">OpenCV</span>
-              <span class="proj-pill">InsightFace</span>
-              <span class="proj-pill">YOLO</span>
-              <span class="proj-pill">Dlib</span>
-              <span class="proj-pill">PyTorch</span>
-              <span class="proj-pill">TorchReID</span>
-              <span class="proj-pill">ONNX Runtime</span>
-              <span class="proj-pill">ByteTrack</span>
-              <span class="proj-pill">Flask</span>
-              <span class="proj-pill">MySQL</span>
-              <span class="proj-pill">NumPy</span>
-              <span class="proj-pill">SciPy</span>
-              <span class="proj-pill">OpenPyXL</span>
-            </div>
-            <div class="proj-footer">
-              <div class="proj-school">
-                <img src="images/wmsu-logo-final.jpg" class="proj-school-img" alt="WMSU" />
-                <span class="proj-school-txt">WMSU · CCS Capstone 2025</span>
-              </div>
-              <a href="https://github.com/Guilmarqw/2025-CP_Present-and-Ready"
-                 target="_blank"
-                 style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.12em;
-                        text-transform:uppercase;color:var(--red-primary);transition:color 0.2s;"
-                 onmouseover="this.style.color='#fff'"
-                 onmouseout="this.style.color='var(--red-primary)'">
-                View Repo →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 2 — Clinic System -->
-        <div class="project-v3 reveal reveal-delay-2">
-          <div class="proj-screenshot">
-            <img src="images/project-clinic.png" alt="WMSU Health Services — University Clinic Management System" />
-            <div class="proj-screenshot-overlay"></div>
-            <div class="proj-screenshot-badge">Web System</div>
-            <div class="proj-screenshot-num">02</div>
-          </div>
-          <div class="proj-body">
-            <div class="proj-meta">
-              <span class="proj-type">// University Project · WMSU</span>
-              <span class="proj-github-link" style="color:var(--gray-700);cursor:default;border-color:var(--dark-border);">
-                Private
-              </span>
-            </div>
-            <h3 class="proj-title">University Clinic Management &amp; Appointment Request System</h3>
-            <p class="proj-desc">
-              Full-featured web system for WMSU Health Services. Covers patient record
-              management, appointment scheduling and requests, medical &amp; dental consultation
-              logs, pharmacy management, real-time notifications (43+ shown), staff dashboards,
-              admin content management, and role-based access control —
-              completely digitizing the campus healthcare workflow.
-            </p>
-            <div class="proj-pills">
-              <span class="proj-pill">PHP</span>
-              <span class="proj-pill">Laravel</span>
-              <span class="proj-pill">MySQL</span>
-              <span class="proj-pill">Bootstrap</span>
-              <span class="proj-pill">JavaScript</span>
-              <span class="proj-pill">Blade Templates</span>
-              <span class="proj-pill">SMTP Mail</span>
-              <span class="proj-pill">Role-Based Auth</span>
-            </div>
-            <div class="proj-footer">
-              <div class="proj-school">
-                <img src="images/wmsu-logo-final.jpg" class="proj-school-img" alt="WMSU" />
-                <span class="proj-school-txt">WMSU Health Services</span>
-              </div>
-              <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.12em;
-                           text-transform:uppercase;color:var(--gray-700);">
-                No Public Repo
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ CONTACT ══════════ -->
-  <section id="contact" class="section-padding" style="background:var(--dark-surface);">
-    <div class="container">
-
-      <div class="section-header reveal">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Let's <span class="text-red">Connect</span></h2>
-        <p class="section-subtitle">
-          Open to project collaborations, dev work, and opportunities. Don't hesitate.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-
-        <!-- Left info -->
-        <div>
-          <div class="contact-info-list">
-            <div class="contact-item reveal">
-              <div class="contact-item-icon">✉</div>
-              <div class="contact-item-content">
-                <div class="contact-item-label">Email</div>
-                <div class="contact-item-value">
-                  <a href="/cdn-cgi/l/email-protection#5438352326313a3731203d383031143339353d387a373b39"><span class="__cf_email__" data-cfemail="a0ccc1d7d2c5cec3c5d4c9ccc4c5e0c7cdc1c9cc8ec3cfcd">lawrencetilde@gmail.com</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-item reveal reveal-delay-1">
-              <div class="contact-item-icon">📍</div>
-              <div class="contact-item-content">
-                <div class="contact-item-label">Location</div>
-                <div class="contact-item-value">Zamboanga City, Philippines</div>
-              </div>
-            </div>
-            <div class="contact-item reveal reveal-delay-2">
-              <div class="contact-item-icon">🎓</div>
-              <div class="contact-item-content">
-                <div class="contact-item-label">University</div>
-                <div class="contact-item-value">
-                  <a href="https://www.linkedin.com/school/western-mindanao-state-university/" target="_blank">
-                    Western Mindanao State University ↗
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-item reveal reveal-delay-3">
-              <div class="contact-item-icon">💼</div>
-              <div class="contact-item-content">
-                <div class="contact-item-label">OJT Company</div>
-                <div class="contact-item-value">
-                  <a href="https://www.linkedin.com/company/vintazk-outsourcing/posts/?feedView=all" target="_blank">
-                    Vintazk Outsourcing ↗
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-item reveal reveal-delay-4">
-              <div class="contact-item-icon">⚡</div>
-              <div class="contact-item-content">
-                <div class="contact-item-label">Status</div>
-                <div class="contact-item-value" style="color:#22c55e;">● Available for Projects</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-social reveal" style="margin-top:var(--space-xl);">
-            <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-icon" title="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/vintazk-outsourcing/posts/?feedView=all" target="_blank" class="btn btn-icon" title="Vintazk LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="/cdn-cgi/l/email-protection#c0aca1b7b2a5aea3a5b4a9aca4a580a7ada1a9aceea3afad" class="btn btn-icon" title="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right form -->
-        <div class="reveal reveal-delay-2">
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-group">
-              <label class="form-label" for="name">Your Name</label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email Address</label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="subject">Subject</label>
-              <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message">Message</label>
-              <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg form-submit">
-              Send Message <span class="btn-arrow"></span>
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ FOOTER ══════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <img src="images/wmsu-logo-final.jpg" alt="WMSU"
-               style="height:28px;width:auto;opacity:0.3;filter:grayscale(100%);transition:all 0.3s;"
-               onmouseover="this.style.opacity='1';this.style.filter='none';"
-               onmouseout="this.style.opacity='0.3';this.style.filter='grayscale(100%)';" />
-          <img src="images/vintazk-logo.jpg" alt="Vintazk"
-               style="height:28px;width:auto;opacity:0.3;filter:grayscale(100%);transition:all 0.3s;"
-               onmouseover="this.style.opacity='1';this.style.filter='none';"
-               onmouseout="this.style.opacity='0.3';this.style.filter='grayscale(100%)';" />
-        </div>
-        <div class="footer-copy">
-          © 2025 <span>Lawrence Olivier N. Tilde</span> · AKA <span>MITSU</span> · 4th Year BSIT · <span>WMSU</span>
-        </div>
-        <div class="footer-links">
-          <a href="#hero"     class="footer-link">Top</a>
-          <a href="#about"      class="footer-link">About</a>
-          <a href="#education"  class="footer-link">Education</a>
-          <a href="#projects"   class="footer-link">Projects</a>
-          <a href="https://github.com/Mitsu5610" target="_blank" class="footer-link">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  <div id="app"></div>
 
   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+    'use strict';
 
-      const btn     = this.querySelector('[type="submit"]');
-      const origTxt = btn.innerHTML;
+    document.body.style.overflow = 'hidden';
 
-      // Loading state
-      btn.innerHTML = '<span style="opacity:0.7">Sending...</span>';
-      btn.disabled  = true;
+    const components = [
+      'components/loader.html',
+      'components/navbar.html',
+      'components/hero.html',
+      'components/about.html',
+      'components/education.html',
+      'components/skills.html',
+      'components/projects.html',
+      'components/contact.html',
+      'components/footer.html',
+    ];
 
-      emailjs.send(
-        'YOUR_SERVICE_ID',    // 🔴 replace after EmailJS setup
-        'YOUR_TEMPLATE_ID',   // 🔴 replace after EmailJS setup
-        {
+    async function loadComponents() {
+      const app = document.getElementById('app');
+      for (const path of components) {
+        const res  = await fetch(path);
+        const html = await res.text();
+        const wrap = document.createElement('div');
+        wrap.innerHTML = html;
+        app.appendChild(wrap);
+      }
+      bootApp();
+    }
+
+    function bootApp() {
+
+      // 0. Draw social icons via JS (script tags in fetched HTML don't execute)
+      const socialIcons = {
+        github:    'M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z',
+        linkedin:  'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+        facebook:  'M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z',
+        instagram: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z'
+      };
+      const svgNS = 'http://www.w3.org/2000/svg';
+      document.querySelectorAll('.contact-social-icon[data-icon]').forEach(el => {
+        const key = el.getAttribute('data-icon');
+        if (!socialIcons[key]) return;
+        const svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('width', '22'); svg.setAttribute('height', '22');
+        svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'currentColor');
+        const path = document.createElementNS(svgNS, 'path');
+        path.setAttribute('d', socialIcons[key]);
+        svg.appendChild(path);
+        el.appendChild(svg);
+      });
+
+      // 1. Loader
+      const loader = document.getElementById('page-loader');
+      setTimeout(() => {
+        if (loader) loader.classList.add('hidden');
+        document.body.style.overflow = '';
+        initReveal();
+      }, 1400);
+
+      // 2. Scroll Reveal
+      function initReveal() {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+      }
+
+      // 3. Custom Cursor
+      const cursor   = document.querySelector('.cursor');
+      const follower = document.querySelector('.cursor-follower');
+      let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top  = mouseY + 'px';
+      });
+
+      (function animateFollower() {
+        followerX += (mouseX - followerX) * 0.12;
+        followerY += (mouseY - followerY) * 0.12;
+        follower.style.left = followerX + 'px';
+        follower.style.top  = followerY + 'px';
+        requestAnimationFrame(animateFollower);
+      })();
+
+      document.querySelectorAll('a, button, .project-card, .skill-category, .contact-item').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.style.width = '20px';   cursor.style.height = '20px';
+          follower.style.width = '54px'; follower.style.height = '54px';
+          follower.style.opacity = '0.3';
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.style.width = '12px';   cursor.style.height = '12px';
+          follower.style.width = '36px'; follower.style.height = '36px';
+          follower.style.opacity = '0.5';
+        });
+      });
+
+      // 4. Navbar
+      const navbar     = document.getElementById('navbar');
+      const navLinks   = document.querySelectorAll('.nav-link');
+      const hamburger  = document.querySelector('.nav-hamburger');
+      const mobileMenu = document.querySelector('.nav-links');
+
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        let current = '';
+        document.querySelectorAll('section[id]').forEach(s => {
+          if (window.scrollY >= s.offsetTop - 120) current = s.id;
+        });
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+      });
+
+      hamburger && hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+      });
+      navLinks.forEach(l => l.addEventListener('click', () => {
+        hamburger && hamburger.classList.remove('open');
+        mobileMenu && mobileMenu.classList.remove('open');
+      }));
+
+      // 5. Matrix Canvas
+      const canvas = document.getElementById('matrix-canvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ';
+        const fontSize = 12;
+        function resizeCanvas() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        const drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
+        setInterval(() => {
+          ctx.fillStyle = 'rgba(8,8,8,0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#E8000D';
+          ctx.font = fontSize + 'px Space Mono, monospace';
+          drops.forEach((y, i) => {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(char, i * fontSize, y * fontSize);
+            if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+          });
+        }, 50);
+      }
+
+      // 6. Skill Bars
+      const barObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animated'); });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.skill-bar-fill').forEach(b => barObs.observe(b));
+
+      // 7. Count Up
+      function countUp(el) {
+        const target = parseInt(el.getAttribute('data-target'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const step   = target / (1500 / 16);
+        let current  = 0;
+        const timer  = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = Math.floor(current) + suffix;
+        }, 16);
+      }
+      const counterObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting && !e.target.classList.contains('counted')) {
+            e.target.classList.add('counted');
+            countUp(e.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.count-up').forEach(el => counterObs.observe(el));
+
+      // 8. Glitch
+      setInterval(() => {
+        const el = document.querySelector('.hero-name .highlight');
+        if (!el) return;
+        el.style.animation = 'none';
+        el.offsetHeight;
+        el.style.animation = '';
+      }, 6000);
+
+      // 9. Click Particles
+      document.addEventListener('click', (e) => {
+        for (let i = 0; i < 6; i++) {
+          const p = document.createElement('div');
+          p.style.cssText = 'position:fixed;width:4px;height:4px;background:#E8000D;border-radius:50%;left:' + e.clientX + 'px;top:' + e.clientY + 'px;pointer-events:none;z-index:9997;';
+          document.body.appendChild(p);
+          const angle = (i / 6) * Math.PI * 2;
+          const dist  = 30 + Math.random() * 40;
+          requestAnimationFrame(() => {
+            p.style.transition = 'all ' + (0.4 + Math.random() * 0.3) + 's ease-out';
+            p.style.transform  = 'translate(' + Math.cos(angle) * dist + 'px,' + Math.sin(angle) * dist + 'px)';
+            p.style.opacity    = '0';
+          });
+          setTimeout(() => p.remove(), 800);
+        }
+      });
+
+      // 10. Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor.getAttribute('href'));
+          if (target) window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+        });
+      });
+
+      // 11. Contact Form
+      const contactForm = document.getElementById('contact-form');
+      contactForm && contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('[type="submit"]');
+        const origTxt = btn.innerHTML;
+        btn.innerHTML = '<span style="opacity:0.7">Sending...</span>';
+        btn.disabled = true;
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
           from_name:  document.getElementById('name').value,
           from_email: document.getElementById('email').value,
           subject:    document.getElementById('subject').value,
           message:    document.getElementById('message').value,
-        }
-      )
-      .then(() => {
-        btn.innerHTML = '✓ Message Sent!';
-        btn.style.background = '#166534';
-        btn.style.borderColor = '#166534';
-        this.reset();
-        setTimeout(() => {
-          btn.innerHTML  = origTxt;
-          btn.style.background = '';
-          btn.style.borderColor = '';
-          btn.disabled = false;
-        }, 3500);
-      })
-      .catch((err) => {
-        console.error(err);
-        btn.innerHTML = '✗ Failed — Try Again';
-        btn.style.background = '#7f1d1d';
-        btn.style.borderColor = '#7f1d1d';
-        setTimeout(() => {
-          btn.innerHTML  = origTxt;
-          btn.style.background = '';
-          btn.style.borderColor = '';
-          btn.disabled = false;
-        }, 3500);
+        })
+        .then(() => {
+          btn.innerHTML = '✓ Message Sent!';
+          btn.style.background = btn.style.borderColor = '#166534';
+          this.reset();
+          setTimeout(() => { btn.innerHTML = origTxt; btn.style.background = btn.style.borderColor = ''; btn.disabled = false; }, 3500);
+        })
+        .catch(err => {
+          console.error(err);
+          btn.innerHTML = '✗ Failed — Try Again';
+          btn.style.background = btn.style.borderColor = '#7f1d1d';
+          setTimeout(() => { btn.innerHTML = origTxt; btn.style.background = btn.style.borderColor = ''; btn.disabled = false; }, 3500);
+        });
       });
-    });
+
+      // 11. Gmail CTA button — pulse animation to invite click
+      const gmailBtn = document.getElementById('gmail-cta');
+      if (gmailBtn) {
+        // Typing animation on the button text
+        const messages = [
+          'Send me a message ↗',
+          'Open Gmail now ↗',
+          'Let\'s talk ↗',
+          'Hire me ↗',
+        ];
+        let msgIndex = 0;
+        setInterval(() => {
+          msgIndex = (msgIndex + 1) % messages.length;
+          gmailBtn.querySelector('.gmail-cta-text').textContent = messages[msgIndex];
+        }, 3000);
+      }
+
+      console.log('%c LAWRENCE OLIVIER N. TILDE ', 'background:#E8000D;color:white;font-size:14px;font-weight:bold;padding:8px 16px;');
+      console.log('%c Full Stack Developer @ MITSU BYTES ', 'color:#E8000D;font-size:12px;');
+    }
+
+    loadComponents();
   </script>
+
 </body>
 </html>
