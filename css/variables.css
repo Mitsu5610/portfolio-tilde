@@ -1,0 +1,59 @@
+/* ============================================
+   VARIABLES.CSS — Design Tokens & CSS Variables
+   Lawrence Olivier N. Tilde Portfolio
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* === COLOR PALETTE === */
+  --red-primary:     #E8000D;
+  --red-dark:        #A50009;
+  --red-deeper:      #6B0006;
+  --red-glow:        rgba(232, 0, 13, 0.4);
+  --red-faint:       rgba(232, 0, 13, 0.08);
+
+  --black:           #000000;
+  --dark-bg:         #080808;
+  --dark-surface:    #0F0F0F;
+  --dark-card:       #141414;
+  --dark-border:     #1E1E1E;
+
+  --white:           #FFFFFF;
+  --gray-100:        #F5F5F5;
+  --gray-300:        #A0A0A0;
+  --gray-500:        #5A5A5A;
+  --gray-700:        #2A2A2A;
+
+  /* === TYPOGRAPHY === */
+  --font-display:    'Bebas Neue', cursive;
+  --font-body:       'Rajdhani', sans-serif;
+  --font-mono:       'Space Mono', monospace;
+
+  /* === SPACING === */
+  --space-xs:    0.25rem;
+  --space-sm:    0.5rem;
+  --space-md:    1rem;
+  --space-lg:    2rem;
+  --space-xl:    4rem;
+  --space-xxl:   8rem;
+
+  /* === BORDERS === */
+  --border-thin:   1px solid var(--dark-border);
+  --border-red:    1px solid var(--red-primary);
+  --border-radius: 4px;
+
+  /* === SHADOWS & GLOWS === */
+  --glow-red:      0 0 20px var(--red-glow), 0 0 60px rgba(232,0,13,0.15);
+  --glow-text:     0 0 30px var(--red-glow);
+  --shadow-card:   0 8px 32px rgba(0,0,0,0.6);
+
+  /* === TRANSITIONS === */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.3s ease;
+  --transition-slow:   0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* === LAYOUT === */
+  --max-width:     1200px;
+  --nav-height:    70px;
+}

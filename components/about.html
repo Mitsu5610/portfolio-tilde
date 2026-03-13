@@ -1,0 +1,94 @@
+<!--
+  ABOUT.HTML — About Section Component
+  Lawrence Olivier N. Tilde Portfolio
+-->
+
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image -->
+      <div class="about-image-wrapper reveal">
+        <div class="about-image-frame">
+          <!-- Replace with your actual photo -->
+          <img
+            src="images/profile.jpg"
+            alt="Lawrence Olivier N. Tilde"
+            class="about-avatar"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Fallback avatar if no image -->
+          <div class="about-avatar-fallback" style="
+            width:100%; max-width:400px; aspect-ratio:1;
+            background: linear-gradient(135deg, #141414, #0f0f0f);
+            display:flex; align-items:center; justify-content:center;
+            border:1px solid #1E1E1E; font-family:'Bebas Neue',cursive;
+            font-size:6rem; color:#E8000D; letter-spacing:4px;
+          ">LOT</div>
+
+          <!-- Company Badge -->
+          <div class="about-company-badge">
+            <div class="badge-label">Works at</div>
+            <div class="badge-company">MITSU BYTES</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text">
+        <div class="section-header reveal">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Code. Build.<br><span class="text-red">Innovate.</span></h2>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <p>
+            I'm <strong>Lawrence Olivier N. Tilde</strong>, a Full Stack Developer based in
+            <strong>Zamboanga City, Philippines</strong>, and a developer at
+            <strong>MITSU BYTES</strong>. I specialize in building web systems that are
+            functional, scalable, and intuitive.
+          </p>
+          <p>
+            My work spans from healthcare management systems to real-time face
+            recognition using computer vision — combining backend logic with
+            clean, purposeful frontends. I'm driven by solving real-world problems
+            through thoughtful software engineering.
+          </p>
+          <p>
+            When I'm not building, I'm learning. Technology evolves fast, and
+            I evolve with it.
+          </p>
+        </div>
+
+        <!-- Details Grid -->
+        <div class="about-details reveal reveal-delay-2">
+          <div class="about-detail-item">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">Zamboanga City, Philippines</div>
+          </div>
+          <div class="about-detail-item">
+            <div class="detail-label">Company</div>
+            <div class="detail-value">MITSU BYTES</div>
+          </div>
+          <div class="about-detail-item">
+            <div class="detail-label">Email</div>
+            <div class="detail-value">
+              <a href="mailto:lawrencetilde@gmail.com">lawrencetilde@gmail.com</a>
+            </div>
+          </div>
+          <div class="about-detail-item">
+            <div class="detail-label">Status</div>
+            <div class="detail-value" style="color: var(--red-primary);">● Available</div>
+          </div>
+        </div>
+
+        <div class="hero-cta reveal reveal-delay-3">
+          <a href="mailto:lawrencetilde@gmail.com" class="btn btn-primary">
+            Get In Touch
+            <span class="btn-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

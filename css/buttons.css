@@ -1,0 +1,190 @@
+/* ============================================
+   BUTTONS.CSS — Button Components
+   ============================================ */
+
+/* === PRIMARY BUTTON === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.8rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  z-index: 0;
+  white-space: nowrap;
+}
+
+/* Ripple effect base */
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: transform var(--transition-base);
+}
+
+/* === BTN PRIMARY === */
+.btn-primary {
+  background: var(--red-primary);
+  color: var(--white);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.btn-primary::before {
+  background: var(--red-dark);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.btn-primary:hover {
+  box-shadow: var(--glow-red);
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* === BTN OUTLINE === */
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--gray-700);
+}
+
+.btn-outline::before {
+  background: var(--dark-card);
+}
+
+.btn-outline::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid transparent;
+  transition: border-color var(--transition-base);
+}
+
+.btn-outline:hover {
+  color: var(--red-primary);
+  border-color: var(--red-primary);
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* === BTN GHOST === */
+.btn-ghost {
+  background: transparent;
+  color: var(--gray-300);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--red-primary);
+  transition: width var(--transition-base);
+}
+
+.btn-ghost:hover {
+  color: var(--white);
+}
+
+.btn-ghost:hover::after {
+  width: 100%;
+}
+
+/* === BTN ICON === */
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dark-border);
+  background: var(--dark-card);
+  color: var(--gray-300);
+  transition: all var(--transition-base);
+  font-size: 1rem;
+}
+
+.btn-icon:hover {
+  border-color: var(--red-primary);
+  color: var(--red-primary);
+  box-shadow: var(--glow-red);
+  transform: translateY(-2px);
+}
+
+/* === Arrow indicator === */
+.btn-arrow {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-arrow::before {
+  content: '→';
+  font-size: 1rem;
+}
+
+/* === Download Button === */
+.btn-download {
+  background: transparent;
+  color: var(--red-primary);
+  border: 1px solid var(--red-primary);
+  clip-path: none;
+}
+
+.btn-download::before {
+  background: var(--red-faint);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.btn-download:hover {
+  color: var(--white);
+  background: var(--red-primary);
+  box-shadow: var(--glow-red);
+  transform: translateY(-2px);
+}
+
+/* === Sizes === */
+.btn-sm {
+  font-size: 0.65rem;
+  padding: 0.55rem 1.2rem;
+}
+
+.btn-lg {
+  font-size: 0.8rem;
+  padding: 1rem 2.2rem;
+}
