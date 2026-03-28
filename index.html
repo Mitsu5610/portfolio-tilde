@@ -10,6 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Prevent flash of wrong theme before CSS loads -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('portfolio-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -18,6 +26,7 @@
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/others.css" />
+  <link rel="stylesheet" href="css/theme.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('YOUR_PUBLIC_KEY');</script>
@@ -80,6 +89,29 @@
         svg.appendChild(path);
         el.appendChild(svg);
       });
+
+      // 0.5 Theme Toggle
+      (function() {
+        const toggle    = document.getElementById('theme-toggle');
+        const iconEl    = document.getElementById('theme-icon');
+        let   theme     = localStorage.getItem('portfolio-theme') || 'dark';
+
+        function applyTheme(t) {
+          theme = t;
+          document.documentElement.setAttribute('data-theme', t);
+          iconEl.textContent   = t === 'dark' ? '☀' : '☾';
+          localStorage.setItem('portfolio-theme', t);
+          // expose to matrix canvas
+          window._portfolioTheme = t;
+        }
+
+        // Sync icon with initial theme (HTML attr already set via head script)
+        applyTheme(theme);
+
+        toggle && toggle.addEventListener('click', () => {
+          applyTheme(theme === 'dark' ? 'light' : 'dark');
+        });
+      })();
 
       // 1. Loader
       const loader = document.getElementById('page-loader');
@@ -164,9 +196,10 @@
         window.addEventListener('resize', resizeCanvas);
         const drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
         setInterval(() => {
-          ctx.fillStyle = 'rgba(8,8,8,0.05)';
+          const isLight = window._portfolioTheme === 'light';
+          ctx.fillStyle = isLight ? 'rgba(242,242,244,0.08)' : 'rgba(8,8,8,0.05)';
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.fillStyle = '#E8000D';
+          ctx.fillStyle = isLight ? 'rgba(232,0,13,0.5)' : '#E8000D';
           ctx.font = fontSize + 'px Space Mono, monospace';
           drops.forEach((y, i) => {
             const char = chars[Math.floor(Math.random() * chars.length)];

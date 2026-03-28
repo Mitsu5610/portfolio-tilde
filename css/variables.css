@@ -13,6 +13,10 @@
   --red-glow:        rgba(232, 0, 13, 0.4);
   --red-faint:       rgba(232, 0, 13, 0.08);
 
+  --cyan:            #00f0ff;
+  --cyan-faint:      rgba(0, 240, 255, 0.05);
+  --cyan-glow:       rgba(0, 240, 255, 0.25);
+
   --black:           #000000;
   --dark-bg:         #080808;
   --dark-surface:    #0F0F0F;
@@ -56,4 +60,25 @@
   /* === LAYOUT === */
   --max-width:     1200px;
   --nav-height:    70px;
+}
+
+/* ============================================
+   LIGHT THEME — Variable Overrides
+   ============================================ */
+[data-theme="light"] {
+  --dark-bg:       #F2F2F4;
+  --dark-surface:  #E9E9EC;
+  --dark-card:     #FFFFFF;
+  --dark-border:   #DEDEE3;
+  --black:         #EAEAED;
+
+  --white:         #0D0D10;
+  --gray-100:      #111114;
+  --gray-300:      #3E3E46;
+  --gray-500:      #6E6E7A;
+  --gray-700:      #D0D0D8;
+
+  --red-faint:     rgba(232, 0, 13, 0.05);
+  --shadow-card:   0 8px 32px rgba(0, 0, 0, 0.1);
+  --glow-red:      0 0 16px rgba(232, 0, 13, 0.25), 0 0 40px rgba(232, 0, 13, 0.08);
 }

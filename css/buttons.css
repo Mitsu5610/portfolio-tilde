@@ -63,6 +63,7 @@
   background: transparent;
   color: var(--white);
   border: 1px solid var(--gray-700);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 
 .btn-outline::before {

@@ -1,0 +1,135 @@
+/* ============================================
+   THEME.CSS — Component-level Light Mode Fixes
+   Variables handle most things; this handles
+   hardcoded rgba/hex values and special cases.
+   ============================================ */
+
+/* === BODY & GLOBAL === */
+[data-theme="light"] body::after {
+  opacity: 0.08; /* reduce noise texture */
+}
+
+[data-theme="light"] body::before {
+  background: linear-gradient(90deg, transparent, var(--red-dark) 20%, var(--red-primary) 50%, var(--red-dark) 80%, transparent);
+}
+
+/* Cursor — remove difference blend-mode on light bg */
+[data-theme="light"] .cursor {
+  mix-blend-mode: normal;
+  background: var(--red-primary);
+  box-shadow: 0 0 6px rgba(232, 0, 13, 0.5);
+}
+
+/* Scrollbar */
+[data-theme="light"] ::-webkit-scrollbar-track { background: var(--dark-surface); }
+
+/* Selection */
+[data-theme="light"] ::selection { background: var(--red-primary); color: #fff; }
+
+/* === LOADER === */
+[data-theme="light"] .page-loader {
+  background: var(--dark-bg);
+}
+
+/* === NAVBAR === */
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(242, 242, 244, 0.95);
+  border-bottom-color: var(--dark-border);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile menu */
+[data-theme="light"] .nav-links {
+  background: rgba(242, 242, 244, 0.98);
+  border-left-color: var(--dark-border);
+}
+
+/* Theme toggle icon color */
+[data-theme="light"] .theme-toggle {
+  border-color: var(--dark-border);
+  color: var(--gray-500);
+}
+
+/* === HERO === */
+[data-theme="light"] #hero {
+  background: var(--dark-bg);
+}
+
+[data-theme="light"] .hero-grid {
+  background-image:
+    linear-gradient(rgba(232, 0, 13, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 0, 13, 0.03) 1px, transparent 1px);
+}
+
+[data-theme="light"] .hero-scanlines {
+  opacity: 0;
+}
+
+[data-theme="light"] .hero-orb {
+  background: radial-gradient(circle, rgba(232, 0, 13, 0.07) 0%, transparent 70%);
+}
+
+[data-theme="light"] .matrix-canvas {
+  opacity: 0.025;
+}
+
+[data-theme="light"] .hero-badge {
+  background: linear-gradient(90deg, rgba(232, 0, 13, 0.04) 0%, transparent 100%);
+}
+
+/* === ABOUT === */
+[data-theme="light"] #about { background: var(--dark-bg); }
+
+[data-theme="light"] .about-image-frame::after {
+  background: rgba(232, 0, 13, 0.04);
+}
+
+/* === EDUCATION === */
+[data-theme="light"] .edu-logo-circle {
+  background: #ffffff;
+  border-color: var(--dark-border);
+}
+
+/* === SKILLS === */
+[data-theme="light"] #skills::before {
+  color: rgba(0, 0, 0, 0.025);
+}
+
+[data-theme="light"] .skill-tag {
+  background: var(--dark-bg);
+}
+
+[data-theme="light"] .skill-bar-track {
+  background: var(--dark-border);
+}
+
+/* === PROJECTS === */
+[data-theme="light"] #projects::before {
+  color: rgba(0, 0, 0, 0.025);
+}
+
+[data-theme="light"] .proj-screenshot img {
+  filter: brightness(0.95) saturate(0.95);
+}
+
+[data-theme="light"] .project-v3:hover .proj-screenshot img {
+  filter: brightness(1) saturate(1);
+}
+
+/* === CONTACT === */
+[data-theme="light"] .contact-item::before,
+[data-theme="light"] .contact-social-card::before {
+  background: rgba(232, 0, 13, 0.04);
+}
+
+/* === FOOTER === */
+[data-theme="light"] footer {
+  background: var(--dark-surface);
+  border-top-color: var(--dark-border);
+}
+
+/* === GMAIL CTA === */
+[data-theme="light"] .gmail-cta-btn {
+  color: var(--white);
+  border-color: var(--red-primary);
+}

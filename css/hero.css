@@ -66,6 +66,32 @@
   max-width: 800px;
 }
 
+/* HUD corner brackets */
+.hero-content::before,
+.hero-content::after {
+  content: '';
+  position: absolute;
+  width: 22px; height: 22px;
+  border-color: var(--red-primary);
+  border-style: solid;
+  opacity: 0.35;
+  transition: opacity 0.4s ease, width 0.4s ease, height 0.4s ease;
+  pointer-events: none;
+}
+.hero-content::before {
+  top: -16px; left: -18px;
+  border-width: 2px 0 0 2px;
+}
+.hero-content::after {
+  bottom: -16px; right: -18px;
+  border-width: 0 2px 2px 0;
+}
+.hero-content:hover::before,
+.hero-content:hover::after {
+  opacity: 0.8;
+  width: 32px; height: 32px;
+}
+
 /* Status Badge */
 .hero-badge {
   display: inline-flex;
@@ -77,9 +103,15 @@
   text-transform: uppercase;
   color: var(--red-primary);
   border: 1px solid rgba(232,0,13,0.3);
+  border-left: 2px solid var(--red-primary);
   padding: 0.4rem 1rem;
   margin-bottom: var(--space-lg);
   animation: fade-up 0.8s ease both;
+  background: linear-gradient(90deg, rgba(232,0,13,0.06) 0%, transparent 100%);
+  transition: box-shadow 0.3s ease;
+}
+.hero-badge:hover {
+  box-shadow: 0 0 16px rgba(232,0,13,0.2);
 }
 
 .hero-badge::before {
@@ -99,7 +131,7 @@
 /* Name */
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-size: clamp(3rem, 10vw, 8rem);
   line-height: 0.9;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -113,6 +145,15 @@
   text-shadow: var(--glow-text);
   position: relative;
   display: inline-block;
+  animation: neon-flicker 9s 2s infinite;
+}
+
+@keyframes neon-flicker {
+  0%, 92%, 100% { opacity: 1; text-shadow: var(--glow-text); }
+  93%           { opacity: 0.5; text-shadow: none; }
+  94%           { opacity: 1; text-shadow: var(--glow-text); }
+  96%           { opacity: 0.3; text-shadow: none; }
+  97%           { opacity: 1; text-shadow: 0 0 40px var(--red-glow), 0 0 80px rgba(232,0,13,0.2); }
 }
 
 /* Glitch Effect on name */
@@ -196,6 +237,17 @@
   padding-top: var(--space-xl);
   border-top: 1px solid var(--dark-border);
   animation: fade-up 0.8s 0.5s ease both;
+  position: relative;
+}
+
+/* HUD accent on stats border */
+.hero-stats::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0;
+  width: 60px; height: 1px;
+  background: var(--red-primary);
+  box-shadow: 0 0 8px var(--red-glow);
 }
 
 .hero-stat-value {
@@ -281,6 +333,8 @@
 .floating-tag:nth-child(3) { animation-delay: 1.2s; }
 .floating-tag:nth-child(4) { animation-delay: 1.4s; }
 .floating-tag:nth-child(5) { animation-delay: 1.6s; }
+.floating-tag:nth-child(6) { animation-delay: 1.8s; }
+.floating-tag:nth-child(7) { animation-delay: 2.0s; }
 
 @keyframes float-tag {
   from { opacity: 0; transform: translateX(20px); }
@@ -298,8 +352,24 @@
   to { opacity: 1; }
 }
 
+/* Floating tags: shrink on tablet, hide on mobile */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-floating { right: 2%; }
+  .floating-tag {
+    font-size: 0.58rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-floating { display: none; }
   .hero-orb { width: 300px; height: 300px; right: -150px; }
   .hero-stats { gap: var(--space-lg); }
+}
+
+@media (max-width: 480px) {
+  .hero-stats { flex-direction: row; gap: var(--space-md); }
+  .hero-stat-value { font-size: 2rem; }
+  .hero-description { font-size: 0.95rem; }
+  .hero-cta { gap: var(--space-sm); }
 }

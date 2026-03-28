@@ -20,10 +20,24 @@
 }
 
 .section-tag::before {
-  content: '';
-  width: 30px;
-  height: 1px;
-  background: var(--red-primary);
+  content: '[';
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  font-family: var(--font-mono);
+  color: var(--red-primary);
+  opacity: 0.7;
+}
+
+.section-tag::after {
+  content: ']';
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--red-primary);
+  opacity: 0.7;
+  margin-left: 2px;
 }
 
 .section-title {
@@ -264,6 +278,30 @@
 
 .skill-category:hover::before { height: 100%; }
 
+/* Scan line sweep on hover */
+.skill-category::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red-primary), var(--cyan), transparent);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.skill-category:hover::after {
+  opacity: 0.6;
+  animation: card-scan 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes card-scan {
+  0%   { top: 0; opacity: 0.7; }
+  100% { top: 100%; opacity: 0; }
+}
+
 .skill-cat-icon {
   font-size: 1.8rem;
   margin-bottom: var(--space-md);
@@ -382,6 +420,14 @@
 .skill-bar-fill--new {
   background: linear-gradient(90deg, #15803d, #22c55e);
   box-shadow: 0 0 8px rgba(34, 197, 94, 0.35);
+}
+
+/* Skills grid responsive */
+@media (max-width: 959px) and (min-width: 600px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 599px) {
+  .skills-grid { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 768px) {
@@ -754,6 +800,7 @@
 }
 
 @media (max-width: 1024px) {
+  .contact-info-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-socials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -762,9 +809,16 @@
   .contact-socials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .contact-info-grid { grid-template-columns: 1fr; }
   .contact-socials-grid { grid-template-columns: 1fr; }
+  .contact-item { padding: var(--space-md); }
+  .contact-social-card { padding: var(--space-md); }
+}
+
+@media (max-width: 480px) {
+  .contact-info-grid { grid-template-columns: 1fr; }
+  .contact-socials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================

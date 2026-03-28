@@ -98,12 +98,33 @@ section {
 }
 
 .section-padding {
-  padding: var(--space-xxl) 0;
+  padding: clamp(3.5rem, 8vw, 8rem) 0;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 var(--space-md); }
 }
 
 .text-red { color: var(--red-primary); }
 .text-mono { font-family: var(--font-mono); }
 .text-display { font-family: var(--font-display); }
+
+/* Red power-on indicator line at top of page */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--red-dark) 20%, var(--red-primary) 50%, var(--red-dark) 80%, transparent 100%);
+  z-index: 9999;
+  pointer-events: none;
+  animation: power-line-pulse 3s ease-in-out infinite;
+}
+
+@keyframes power-line-pulse {
+  0%, 100% { opacity: 0.55; }
+  50%       { opacity: 1; box-shadow: 0 0 12px var(--red-glow); }
+}
 
 /* Noise texture overlay */
 body::after {
