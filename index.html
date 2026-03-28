@@ -162,10 +162,11 @@
       });
 
       // 4. Navbar
-      const navbar     = document.getElementById('navbar');
-      const navLinks   = document.querySelectorAll('.nav-link');
-      const hamburger  = document.querySelector('.nav-hamburger');
-      const mobileMenu = document.querySelector('.nav-links');
+      const navbar      = document.getElementById('navbar');
+      const navLinks    = document.querySelectorAll('.nav-link');
+      const mobileMenu  = document.getElementById('nav-links');
+      const mobileFab   = document.getElementById('mobile-fab');
+      let   menuScrollY = 0;
 
       window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -176,14 +177,49 @@
         navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
       });
 
-      hamburger && hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        mobileMenu.classList.toggle('open');
+      function openMenu() {
+        menuScrollY = window.scrollY;
+        document.body.style.top = `-${menuScrollY}px`;
+        document.body.classList.add('menu-open');
+        mobileMenu  && mobileMenu.classList.add('open');
+        mobileFab   && mobileFab.classList.add('open');
+      }
+
+      function closeMenu() {
+        mobileMenu  && mobileMenu.classList.remove('open');
+        mobileFab   && mobileFab.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        document.body.style.top = '';
+        // Restore scroll position — compatible with iOS Safari + older Android
+        window.scrollTo(0, menuScrollY);
+      }
+
+      function toggleMenu() {
+        mobileMenu && mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+      }
+
+      mobileFab && mobileFab.addEventListener('click', toggleMenu);
+
+      // Close menu when a nav link is tapped
+      navLinks.forEach(l => l.addEventListener('click', closeMenu));
+
+      // Close menu when clicking the dim backdrop (outside the panel)
+      mobileMenu && mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
       });
-      navLinks.forEach(l => l.addEventListener('click', () => {
-        hamburger && hamburger.classList.remove('open');
-        mobileMenu && mobileMenu.classList.remove('open');
-      }));
+
+      // Mobile touch feedback — add .tapped on touchstart, remove after 300ms
+      navLinks.forEach(link => {
+        link.addEventListener('touchstart', () => {
+          link.classList.add('tapped');
+        }, { passive: true });
+        link.addEventListener('touchend', () => {
+          setTimeout(() => link.classList.remove('tapped'), 300);
+        }, { passive: true });
+        link.addEventListener('touchcancel', () => {
+          link.classList.remove('tapped');
+        }, { passive: true });
+      });
 
       // 5. Matrix Canvas
       const canvas = document.getElementById('matrix-canvas');

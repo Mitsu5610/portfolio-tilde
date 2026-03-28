@@ -368,8 +368,18 @@
 }
 
 @media (max-width: 480px) {
-  .hero-stats { flex-direction: row; gap: var(--space-md); }
-  .hero-stat-value { font-size: 2rem; }
-  .hero-description { font-size: 0.95rem; }
-  .hero-cta { gap: var(--space-sm); }
+  .hero-stats      { gap: var(--space-md); }
+  .hero-stat-value { font-size: 1.9rem; }
+  .hero-description { font-size: 0.92rem; }
+  .hero-cta        { gap: var(--space-sm); flex-wrap: wrap; }
+  .hero-badge      { font-size: 0.6rem; padding: 0.35rem 0.8rem; }
+}
+
+/* Small phones — Samsung A12 (360px), iPhone SE (375px) */
+@media (max-width: 390px) {
+  .hero-name       { font-size: clamp(2.6rem, 9vw, 3rem); letter-spacing: 1px; }
+  .hero-stat-value { font-size: 1.7rem; }
+  .hero-stats      { gap: 1.2rem; }
+  .hero-title      { font-size: 0.62rem; letter-spacing: 0.15em; }
+  .hero-description { font-size: 0.88rem; }
 }

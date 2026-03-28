@@ -4,7 +4,7 @@
     <a href="#hero" class="nav-logo">
       <span style="color:var(--red-primary);">&#60;</span>LOT<span style="color:var(--red-primary);">/&#62;</span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about"     class="nav-link">About</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#skills"    class="nav-link">Skills</a></li>
@@ -15,9 +15,17 @@
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
         <span id="theme-icon">☀</span>
       </button>
-      <button class="nav-hamburger" aria-label="Toggle menu">
+      <!-- desktop only — hidden on mobile, FAB is used instead -->
+      <button class="nav-hamburger nav-hamburger--desktop" id="nav-hamburger-desktop" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </nav>
+
+<!-- ══ FLOATING MOBILE MENU BUTTON (FAB) ══ -->
+<button class="mobile-fab" id="mobile-fab" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
