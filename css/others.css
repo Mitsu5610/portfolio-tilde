@@ -471,6 +471,25 @@
       grid-template-columns: 1fr 1fr;
       gap: var(--space-lg) var(--space-xxl);
       margin-top: var(--space-xxl);
+      padding-top: var(--space-xxl);
+      border-top: 1px solid var(--dark-border);
+      position: relative;
+    }
+
+    .skills-bars-2col::before {
+      content: 'PROFICIENCY';
+      position: absolute;
+      top: calc(-1 * var(--space-xxl) / 2);
+      left: 50%;
+      transform: translate(-50%, 50%);
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-700);
+      background: var(--dark-surface);
+      padding: 0 var(--space-md);
+      white-space: nowrap;
     }
 
     @media (max-width: 900px) {
