@@ -74,8 +74,8 @@
 
   --white:         #0D0D10;
   --gray-100:      #111114;
-  --gray-300:      #3E3E46;
-  --gray-500:      #6E6E7A;
+  --gray-300:      #1A1A22;   /* was #3E3E46 — much darker now */
+  --gray-500:      #2C2C38;   /* was #6E6E7A — much darker now */
   --gray-700:      #D0D0D8;
 
   --red-faint:     rgba(232, 0, 13, 0.05);
