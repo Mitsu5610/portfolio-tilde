@@ -1,106 +1,130 @@
 <!-- ══════════ ABOUT ══════════ -->
-<section id="about" class="section-padding">
-  <div class="container">
-    <div class="about-grid" style="gap:5rem;">
+<section id="about" class="section-padding" style="background:#0b0d11; color:#f0f0f0;">
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 20px;">
 
-      <!-- Profile photo -->
-      <div class="about-image-wrapper reveal" style="display:flex;justify-content:center;">
-        <div style="position:relative;max-width:380px;width:100%;">
-          <div class="profile-wrap">
-            <img src="images/profile.jpg" alt="Lawrence Olivier N. Tilde" class="profile-img" />
-          </div>
-          <div class="ojt-badge">
-            <div class="ojt-dot"></div>
-            <img src="images/vintazk-logo.jpg" class="ojt-badge-img" alt="Vintazk" />
-            <div>
-              <div class="ojt-badge-label">Currently OJT at</div>
-              <div class="ojt-badge-val">Vintazk Outsourcing</div>
+        <div class="about-grid" style="display:grid; grid-template-columns:1fr 1.8fr; gap:5rem; align-items:start;">
+
+            <!-- Profile photo -->
+            <div class="about-image-wrapper reveal" style="display:flex; justify-content:center;">
+                <div style="position:relative; max-width:380px; width:100%;">
+                    <div class="profile-wrap" style="border-radius:20px; overflow:hidden; border:3px solid #e63946; box-shadow:0 20px 40px rgba(230,57,70,0.25);">
+                        <img src="images/profile.jpg" alt="Lawrence Olivier N. Tilde" class="profile-img" style="width:100%; height:auto; display:block;" />
+                    </div>
+                    <div class="ojt-badge" style="margin-top:20px; background:rgba(20,22,30,0.92); backdrop-filter:blur(12px); border:1px solid rgba(230,57,70,0.5); border-radius:16px; padding:16px 20px; display:flex; align-items:center; gap:14px; box-shadow:0 8px 24px rgba(0,0,0,0.6);">
+                        <div class="ojt-dot" style="width:12px; height:12px; border-radius:50%; background:#22c55e; flex-shrink:0; box-shadow:0 0 12px #22c55e;"></div>
+                        <img src="images/vintazk-logo.jpg" class="ojt-badge-img" alt="Vintazk" style="width:42px; height:42px; border-radius:10px; object-fit:cover; flex-shrink:0; border:1px solid #333;" />
+                        <div>
+                            <div class="ojt-badge-label" style="font-size:12px; font-weight:700; color:#aaa; letter-spacing:0.5px; text-transform:uppercase;">Currently OJT at</div>
+                            <div class="ojt-badge-val" style="font-size:16px; font-weight:700; color:#fff;">Vintazk Outsourcing</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Text -->
-      <div class="about-text">
-        <div class="section-header reveal">
-          <div class="section-tag">About Me</div>
-          <h2 class="section-title">Code. Build.<br><span class="text-red">Innovate.</span></h2>
-        </div>
+            <!-- Text -->
+            <div class="about-text">
 
-        <div class="reveal reveal-delay-1">
-          <p>
-            Hey — I'm <strong>Lawrence Olivier N. Tilde</strong>, also known as
-            <strong style="color:var(--red-primary);">MITSU</strong>. I'm a
-            <strong>4th Year BS Information Technology</strong> student at
-            <strong>Western Mindanao State University</strong>, College of Computing Studies,
-            currently doing my On-the-Job Training at <strong>Vintazk Outsourcing</strong>
-            in Zamboanga City, Philippines.
-          </p>
-          <p>
-            I build real-world systems — my capstone project is a
-            real-time AI face recognition system with liveness detection,
-            powered by OpenCV, InsightFace, YOLO, PyTorch, and more.
-            I also built a full university clinic management system
-            using Laravel and MySQL.
-          </p>
-          <p>
-            I build things that actually work. I push what I know to the edge,
-            then go further.
-          </p>
-        </div>
+                <div class="section-header reveal" style="margin-bottom:24px;">
+                    <div class="section-tag" style="display:inline-block; background:rgba(230,57,70,0.15); color:#e63946; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 16px; border-radius:30px; margin-bottom:12px;">About Me</div>
+                    <h2 class="section-title" style="font-size:42px; font-weight:800; line-height:1.15; color:#fff; margin:0;">
+                        Code. Build.<br><span class="text-red" style="color:#e63946; font-weight:900;">Innovate.</span>
+                    </h2>
+                </div>
 
-        <div class="about-details reveal reveal-delay-2">
-          <div class="about-detail-item">
-            <div class="detail-label">Degree</div>
-            <div class="detail-value">BS Information Technology</div>
-          </div>
-          <div class="about-detail-item">
-            <div class="detail-label">Year Level</div>
-            <div class="detail-value">4th Year · BSIT</div>
-          </div>
-          <div class="about-detail-item">
-            <div class="detail-label">University</div>
-            <div class="detail-value">WMSU · Zamboanga City</div>
-          </div>
-          <div class="about-detail-item">
-            <div class="detail-label">OJT</div>
-            <div class="detail-value" style="color:#22c55e;">● Vintazk Outsourcing</div>
-          </div>
-          <div class="about-detail-item">
-            <div class="detail-label">Email</div>
-            <div class="detail-value">
-              <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank">lawrencetilde@gmail.com</a>
+                <div class="reveal reveal-delay-1" style="font-size:17px; line-height:1.75; color:#d0d0d0; font-weight:400;">
+
+                    <p style="margin-bottom:16px; font-weight:400;">
+                        Hey — I'm <strong style="color:#fff; font-weight:700;">Lawrence Olivier N. Tilde</strong>, also known as
+                        <strong style="color:#e63946; font-weight:800;">MITSU</strong>. I'm a
+                        <strong style="color:#fff; font-weight:700;">4th Year BS Information Technology</strong> student at
+                        <strong style="color:#fff; font-weight:700;">Western Mindanao State University</strong>, College of Computing Studies,
+                        currently doing my On-the-Job Training at <strong style="color:#fff; font-weight:700;">Vintazk Outsourcing</strong>
+                        in Zamboanga City, Philippines.
+                    </p>
+
+                    <p style="margin-bottom:16px; font-weight:400;">
+                        I build real-world systems — my capstone project is a
+                        <strong style="color:#fff; font-weight:700;">real-time AI face recognition system</strong> with liveness detection,
+                        powered by OpenCV, InsightFace, YOLO, PyTorch, and more.
+                        I also built a full <strong style="color:#fff; font-weight:700;">university clinic management system</strong>
+                        using Laravel and MySQL.
+                    </p>
+
+                    <p style="margin-bottom:0; font-weight:500; color:#e8e8e8; font-size:18px;">
+                        I build things that actually work. I push what I know to the edge,
+                        then go further.
+                    </p>
+                </div>
+
+                <!-- Details Grid -->
+                <div class="about-details reveal reveal-delay-2" style="display:grid; grid-template-columns:1fr 1fr; gap:12px 28px; margin:28px 0 32px; padding:20px 0; border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06);">
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">Degree</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600; color:#f0f0f0;">BS Information Technology</div>
+                    </div>
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">Year Level</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600; color:#f0f0f0;">4th Year · BSIT</div>
+                    </div>
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">University</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600; color:#f0f0f0;">WMSU · Zamboanga City</div>
+                    </div>
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">OJT</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600; color:#22c55e; display:flex; align-items:center; gap:6px;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 10px #22c55e;"></span>
+                            Vintazk Outsourcing
+                        </div>
+                    </div>
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">Email</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600;">
+                            <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank" style="color:#e63946; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(230,57,70,0.3); transition:border-color 0.2s;">lawrencetilde@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="about-detail-item">
+                        <div class="detail-label" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:2px;">GitHub</div>
+                        <div class="detail-value" style="font-size:16px; font-weight:600;">
+                            <a href="https://github.com/Mitsu5610" target="_blank" style="color:#e63946; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(230,57,70,0.3); transition:border-color 0.2s;">github.com/Mitsu5610</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta reveal reveal-delay-3" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:4px;">
+                    <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:8px; background:#e63946; color:#fff; font-weight:700; font-size:16px; padding:14px 32px; border-radius:40px; text-decoration:none; transition:all 0.25s; box-shadow:0 8px 24px rgba(230,57,70,0.35); border:none; cursor:pointer;">
+                        Get In Touch
+                        <span class="btn-arrow" style="display:inline-block; transition:transform 0.25s;">→</span>
+                    </a>
+                    <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-outline" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#f0f0f0; font-weight:700; font-size:16px; padding:14px 32px; border-radius:40px; text-decoration:none; border:2px solid rgba(255,255,255,0.2); transition:all 0.25s; cursor:pointer;">
+                        GitHub ↗
+                    </a>
+                </div>
+
             </div>
-          </div>
-          <div class="about-detail-item">
-            <div class="detail-label">GitHub</div>
-            <div class="detail-value">
-              <a href="https://github.com/Mitsu5610" target="_blank">github.com/Mitsu5610</a>
-            </div>
-          </div>
         </div>
 
-        <div class="hero-cta reveal reveal-delay-3">
-          <a href="https://mail.google.com/mail/?view=cm&to=lawrencetilde@gmail.com" target="_blank" class="btn btn-primary">
-            Get In Touch <span class="btn-arrow"></span>
-          </a>
-          <a href="https://github.com/Mitsu5610" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        <!-- Logo Strip -->
+        <div class="logo-strip reveal" style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; margin-top:56px; padding-top:36px; border-top:1px solid rgba(255,255,255,0.06);">
+
+            <div class="logo-strip-item" style="display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); padding:12px 24px 12px 18px; border-radius:60px; border:1px solid rgba(255,255,255,0.06);">
+                <img src="images/wmsu-logo-final.jpg" alt="WMSU" style="width:44px; height:44px; border-radius:12px; object-fit:cover; border:1px solid rgba(255,255,255,0.08);" />
+                <div class="logo-strip-label" style="font-size:15px; font-weight:600; color:#ccc;">WMSU · University</div>
+            </div>
+
+            <div class="logo-strip-item" style="display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.04); padding:12px 24px 12px 18px; border-radius:60px; border:1px solid rgba(255,255,255,0.06);">
+                <img src="images/vintazk-logo.jpg" alt="Vintazk Outsourcing" style="width:44px; height:44px; border-radius:12px; object-fit:cover; border:1px solid rgba(255,255,255,0.08);" />
+                <div class="logo-strip-label" style="font-size:15px; font-weight:600; color:#ccc;">Vintazk · OJT Company</div>
+            </div>
+
         </div>
-      </div>
 
     </div>
-
-    <!-- Logo Strip -->
-    <div class="logo-strip reveal">
-      <div class="logo-strip-item">
-        <img src="images/wmsu-logo-final.jpg" alt="WMSU" />
-        <div class="logo-strip-label">WMSU · University</div>
-      </div>
-      <div class="logo-strip-item">
-        <img src="images/vintazk-logo.jpg" alt="Vintazk Outsourcing" />
-        <div class="logo-strip-label">Vintazk · OJT Company</div>
-      </div>
-    </div>
-
-  </div>
 </section>
