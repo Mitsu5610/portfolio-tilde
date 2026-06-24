@@ -142,3 +142,24 @@
 [data-theme="light"] .nav-links::before {
   background: rgba(0, 0, 0, 0.25);
 }
+
+
+/* === LIGHT MODE TEXT FORCE FIX === */
+[data-theme="light"] .ojt-badge-label,
+[data-theme="light"] .logo-strip-label,
+[data-theme="light"] .proj-school-txt,
+[data-theme="light"] .proj-github-link,
+[data-theme="light"] .edu-ext-link,
+[data-theme="light"] .edu-chip,
+[data-theme="light"] .hero-stat-label,
+[data-theme="light"] .hero-title,
+[data-theme="light"] .hero-description,
+[data-theme="light"] .floating-tag,
+[data-theme="light"] .loader-text {
+  color: #111111;
+}
+
+[data-theme="light"] .edu-dept,
+[data-theme="light"] .proj-desc {
+  color: #222222;
+}
